@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import sys, argparse
 import os, json
 
@@ -71,7 +73,7 @@ def list_all():
 		for item in to_do["items"]:
 			print("{}. {}".format(i, item))
 			i+=1
-		print()
+		print('')
 
 def exec_choice(choice):
 	if choice == 0:
