@@ -12,7 +12,9 @@ setup(
     license = "BSD",
     keywords = "to do list command line",
     url = "https://github.com/ncover21/things",
-    scripts=["things.py"],
+    entry_points = {
+        'console_scripts': ['things=things_app.things:main'],
+    },
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 1 - Alpha",
