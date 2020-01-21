@@ -54,6 +54,15 @@ def remove_item():
 
 def edit_item():
 	clear_screen()
+	list_all()
+	e_num = input("Enter Number of Item to Edit\n >> ")
+	if(int(e_num) <= len(to_do["items"]) and int(e_num) > 0):
+		new_desc = input("Enter Replacement\n >> ")
+		to_do["items"][int(e_num) -1 ] = new_desc
+		write_todo()
+	else:
+		input("{} is out of range (press Enter)".format(r_num))
+	printmenu()
 
 def list_all():
 	if len(to_do["items"]) > 0:
